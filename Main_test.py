@@ -109,8 +109,6 @@ for i in range(n):
     delta_T_Spiking = delta_t_spiking
     T_to_Spiking = t_to_spiking
     
-    # print("Q_transmitter[0]",": ", i, Q_transmitter[0])
-    
     Spiking_mask = OutSpikes.clone()
     
     ###突触权重更新
@@ -128,15 +126,6 @@ for i in range(n):
     N_star_0 = n_star_0
     C_star = c_star
     N_star = n_star
-    
-    
-    # print("C_star[1]",": ", i, C_star[1])
-    # print("N_star[1]",": ", i, N_star[1])
-    print("W_dict[0]",": ", i, W_dict[0])
-    # print("delta_T_Spiking[1]",": ", i, delta_T_Spiking[1])
-    # print("delta_E_LTP[1]",": ", i, delta_E_LTP[1])
-    # print("delta_E_LTD[1]",": ", i, delta_E_LTD[1])
-    
     
     
     MemPotential_list = MemPotential.clone()
@@ -223,6 +212,7 @@ np.savetxt('11.N_star_data.csv', N_star_data, delimiter=',')
 
 Ca_data = np.vstack(Ca_flaten).reshape(-1, 1)
 np.savetxt('12.Ca_data.csv', Ca_data, delimiter=',')
+
 
 
 
